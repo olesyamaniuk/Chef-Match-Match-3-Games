@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poetsen+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Wendy+One&display=swap");
 
 :root {
 }
@@ -10,8 +10,8 @@
 
 html {
   scroll-behavior: smooth;
-  background: #ebdfc0;
-  color: rgba(148, 50, 23, 1);
+  background: #ebcaa1;
+  color: rgba(155, 42, 35, 1);
 }
 
 body {
@@ -68,11 +68,6 @@ a {
 }
 
 .header {
-  position: fixed;
-  width: 100%;
-  z-index: 5;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
 }
 
 .header.is-open .header__background {
@@ -110,10 +105,11 @@ a {
   position: fixed;
   width: 100%;
   z-index: 5;
-  background: transparent;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
   display: flex;
   height: 80px;
-  background: rgba(190, 125, 25, 1);
+  background: rgba(155, 42, 35, 1);
 }
 .header__background {
   position: absolute;
@@ -125,7 +121,7 @@ a {
   z-index: -1;
   -webkit-transition: left 0.3s ease;
   transition: left 0.3s ease;
-  background: rgba(190, 125, 25, 1);
+  background: rgba(155, 42, 35, 1);
 }
 .header.is-open .header__background {
   left: 0;
@@ -176,7 +172,7 @@ a {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 9px 11px;
+  padding: 8px 16px;
   position: relative;
 }
 
@@ -191,7 +187,7 @@ a {
   top: 100%;
   right: -100%;
   width: 100%;
-  height: 557px;
+  height: 457px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 999;
@@ -200,22 +196,22 @@ a {
 
   border-radius: 0px 0px;
   gap: 26px;
-  background: rgba(190, 125, 25, 1);
+  background: rgba(155, 42, 35, 1);
 }
 .navigation__list.is-open {
   right: 0;
 }
 .navigation__link {
-  font-family: Comic Neue;
+  font-family: Poppins;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 27px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 
   text-decoration: none;
-  color: rgba(254, 243, 226, 1);
+  color: rgba(255, 248, 240, 1);
 }
 
 .header.is-open {
@@ -225,8 +221,8 @@ a {
   display: none;
 }
 .header-title {
-  width: 50px;
-  height: 50px;
+  width: 64px;
+  height: 44px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -237,7 +233,7 @@ a {
     display: none;
   }
   .header-title {
-    width: 44px;
+    width: 64px;
     height: 44px;
 
     margin-right: 400px;
@@ -297,6 +293,7 @@ a {
   .header__icon-home-img {
     display: none;
   }
+
   .navigation__item-desk {
     display: none;
   }
@@ -306,38 +303,37 @@ a {
   width: 375px;
   height: 812px;
 
-  padding: 114px 16px 0;
+  padding: 121px 16px 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url("/img/home/Hero.png");
+  background-image: url("/image/home/Hero\ Section\ \(1\).png");
   margin: auto;
 }
 
 .home-title {
-  font-family: Poetsen One;
-  font-size: 48px;
-  font-weight: 900;
-  line-height: 62.4px;
+  font-family: Wendy One;
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 59.8px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  -webkit-text-stroke: 1px rgba(148, 50, 23, 1);
-  color: transparent;
-  background: linear-gradient(180deg, #fdf7de 0%, #fde85d 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
+  -webkit-text-stroke: 3px rgba(155, 42, 35, 1);
+  color: rgba(255, 248, 240, 1);
 }
 .home-text {
-  font-family: Comic Neue;
+  font-family: Poppins;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 28.6px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+
   color: rgba(255, 255, 255, 1);
-  padding: 24px 0 64px;
+  padding: 16px 0 369px;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
 .home__google-button_link {
@@ -352,39 +348,35 @@ a {
   .home {
     width: 1440px;
     height: 759px;
+
     display: flex;
     align-items: start;
-
     justify-content: start;
-    padding: 140px 0px 0px 160px;
-    background-image: url("/img/home/Hero\ \(1\).png");
+    padding: 150px 0px 0px 160px;
+    background-image: url("/image/home/Hero.png");
   }
   .home-title {
-    font-family: Poetsen One;
-    font-size: 96px;
+    font-family: Wendy One;
+    font-size: 92px;
     font-weight: 400;
-    line-height: 124.8px;
+    line-height: 119.6px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    -webkit-text-stroke: 6px rgba(155, 42, 35, 1);
     width: 742px;
-
-    -webkit-text-stroke: 4px rgba(148, 50, 23, 1);
-    color: transparent;
-    background: linear-gradient(180deg, #fdf7de 0%, #fde85d 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
   }
   .home-text {
-    font-family: Comic Neue;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 36.4px;
+    font-family: Poppins;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 33.8px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    width: 640px;
 
-    padding: 16px 0 80px;
+    padding: 24px 0 64px;
   }
   .home__google-button_link {
     display: flex;
@@ -394,219 +386,94 @@ a {
   }
 }
 .about {
-  padding: 64px 16px 0px;
+  padding: 80px 16px;
   margin: auto;
   width: 375px;
-  height: 619px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url("/img/about/Frame\ 1.png");
 }
 
 .about-title {
-  font-family: Poetsen One;
-  font-size: 36px;
+  font-family: Wendy One;
+  font-size: 32px;
   font-weight: 400;
-  line-height: 46.8px;
-  text-align: center;
+  line-height: 41.6px;
+  text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: rgba(190, 125, 25, 1);
+
+  color: rgba(155, 42, 35, 1);
 }
 
 .about-text {
-  font-family: Comic Neue;
+  font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  text-align: center;
+  text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 
-  padding: 32px 0 0;
+  padding: 40px 0;
 }
 
+.about-img {
+  width: 343px;
+  height: 417px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 32px;
+}
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 @media screen and (min-width: 1200px) {
   .about {
-    padding: 80px 448px;
+    padding: 120px 160px;
     margin: auto;
     width: 1440px;
-    height: 481px;
-    background-image: url("/img/about/Frame\ 2.png");
   }
-
+  .about-container {
+    display: flex;
+    gap: 98px;
+  }
   .about-title {
-    font-family: Poetsen One;
+    font-family: Wendy One;
     font-size: 40px;
     font-weight: 400;
     line-height: 52px;
-    text-align: center;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
   }
 
   .about-text {
-    font-family: Comic Neue;
+    width: 543px;
+    font-family: Poppins;
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
-    text-align: center;
+    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    padding: 40px 0 0;
+    padding: 60px 0 0;
   }
   .about-img {
-    width: 524px;
-    height: 406px;
-    margin: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url("/image/about/img\ tel\ \(1\).png");
+    width: 479px;
+    height: 417px;
   }
 }
 
-.play {
-  width: 375px;
-  margin: auto;
-  padding: 32px 16px 0;
-  text-align: center;
-}
-.play-container {
-  width: 342px;
-  padding: 16px;
-  gap: 16px;
-  border-radius: 32px;
-  background: rgba(255, 175, 54, 1);
-  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.5) inset,
-    0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-}
-.play-title {
-  font-family: Comic Neue;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 28.6px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-.play-list {
-  margin: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 16px;
-  padding-top: 16px;
-}
-.play-item {
-  width: 310px;
-  height: 147px;
-  padding: 16px;
-  background: rgba(254, 243, 226, 1);
-  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25),
-    inset 0px 2px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(255, 255, 255, 0.5);
-
-  border-radius: 16px;
-}
-
-.play-text-bold {
-  font-family: Comic Neue;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 27px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-.play-text {
-  padding-top: 16px;
-  font-family: Comic Neue;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-
-@media screen and (min-width: 1200px) {
-  .play {
-    width: 1440px;
-    padding: 47px 160px 80px;
-  }
-
-  .play-container {
-    width: 1120px;
-    height: 466px;
-    padding: 32px;
-    border-radius: 32px;
-  }
-  .play-title {
-    font-family: Comic Neue;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 36.4px;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-  }
-  .play-list {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 16px;
-    padding-top: 32px;
-  }
-  .play-item {
-    width: 341px;
-    height: 159px;
-    padding: 16px;
-    background: rgba(254, 243, 226, 1);
-    box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25),
-      inset 0px 2px 4px 0px rgba(0, 0, 0, 0.25),
-      0px 4px 4px 0px rgba(255, 255, 255, 0.5);
-
-    border-radius: 16px;
-  }
-
-  .play-text-bold {
-    font-family: Comic Neue;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 30px;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-  }
-  .play-text {
-    padding-top: 16px;
-
-    font-family: Comic Neue;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 27px;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-  }
-}
 .how {
   width: 375px;
-  height: 1929px;
   margin: auto;
-  padding: 64px 16px 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url("/img/how/Advantages.png");
+  padding: 80px 16px;
 }
 
 .how-list {
-  width: 342px;
-  padding-top: 32px;
+  width: 343px;
+  padding-top: 40px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -615,27 +482,26 @@ a {
 }
 .how-item {
   width: 343px;
-  height: 287px;
-  padding: 40px 0px 40px 0px;
+  height: 316px;
 }
 .how-img {
   margin: auto;
 }
 .how-text-bold {
-  padding: 16px;
-  font-family: Comic Neue;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 30px;
+  padding: 24px;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
 .how-text {
-  font-family: Comic Neue;
-  font-size: 18px;
+  font-family: Poppins;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 24px;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -643,59 +509,59 @@ a {
 @media screen and (min-width: 1200px) {
   .how {
     width: 1440px;
-    height: 786px;
 
     margin: auto;
-    padding: 80px 160px 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url("/img/how/Advantages\ \(1\).png");
+    padding: 120px 160px;
   }
 
   .how-list {
     width: auto;
-    padding-top: 40px;
+    padding-top: 60px;
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
     column-gap: 32px;
+    row-gap: 60px;
   }
+
   .how-item {
     width: 352px;
-    height: 287px;
-    padding: 40px 0px 40px 0px;
+    height: 316px;
+  }
+
+  .how-text-bold {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .how-text {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
   }
 }
 .gallery {
   width: 375px;
-  height: 761px;
-
   margin: auto;
-  padding: 64px 16px 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url("/img/gallery/Gallery.png");
+  padding: 80px 16px;
 }
-.gallery-container {
-  margin-top: 32px;
-  width: 343px;
-  height: 574px;
-  background: rgba(255, 175, 54, 1);
-  padding: 16px;
-  border-radius: 32px;
-  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.5) inset,
-    0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-}
+
 .gallery__list {
+  margin-top: 40px;
+  padding-bottom: 30px;
 }
 .gallery__item {
-  width: 294px;
-  height: 522px;
-
-  border-radius: 16px;
-
+  width: 313px;
+  height: 558px;
+  border-radius: 32px;
   overflow: hidden;
   position: relative;
   margin: 0 4px;
@@ -716,29 +582,21 @@ a {
 @media screen and (min-width: 1200px) {
   .gallery {
     width: 1440px;
-    height: 882px;
 
     margin: auto;
-    padding: 80px 160px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url("/img/gallery/Gallery\ \(1\).png");
+    padding: 120px 160px;
   }
-  .gallery-container {
-    margin-top: 40px;
-    width: 1120px;
-    height: 630px;
-    background: rgba(255, 175, 54, 1);
-    padding: 40px 96px;
-    border-radius: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.5) inset,
-      0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-  }
+
   .gallery__list {
+    width: 928px;
+    margin: auto;
+    margin-top: 60px;
   }
   .gallery__item {
-    margin: 0 10px;
+    margin: 0 4px;
+    width: 226px;
+    height: 403px;
+    border-radius: 32px;
   }
 
   .slick-prev:before {
@@ -746,231 +604,114 @@ a {
     width: 64px;
     height: 64px;
     margin-left: -44px;
-    content: url("/img/gallery/Arrow.png");
+    content: url("/image/gallery/Arrow.png");
   }
   .slick-next:before {
     display: flex;
     width: 64px;
     height: 64px;
-    content: url("/img/gallery/Arrow\ \(1\).png");
+    content: url("/image/gallery/Arrow\ \(1\).png");
   }
 }
-.faq {
+.benefits {
   width: 375px;
-  height: 1479px;
   margin: auto;
-  padding: 64px 16px 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url("/img/faq/Advantages\ \(2\).png");
+  padding: 80px 16px;
 }
-.faq-list {
-  margin-top: 32px;
+.benefits-list {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 343px;
-  background: rgba(255, 175, 54, 1);
-  padding: 16px;
-  border-radius: 32px;
-  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.5) inset,
-    0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-}
-.faq-item-title {
-  font-family: Comic Neue;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 28.6px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  width: 311px;
-  background: rgba(254, 243, 226, 1);
-  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25),
-    inset 0px 2px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(255, 255, 255, 0.5);
-
-  padding: 8px 16px 8px 16px;
-  border-radius: 16px;
-}
-.faq-item-text {
-  margin-top: 8px;
-  font-family: Comic Neue;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 27px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  width: 311px;
-  background: rgba(254, 243, 226, 1);
-
-  padding: 8px 16px 8px 16px;
-  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25),
-    inset 0px 2px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(255, 255, 255, 0.5);
-
-  border-radius: 16px;
-}
-@media screen and (min-width: 1200px) {
-  .faq {
-    width: 1440px;
-    height: 1162px;
-    padding: 80px 160px 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url("/img/faq/Advantages\ \(3\).png");
-  }
-
-  .faq-list {
-    margin-top: 40px;
-    width: 1120px;
-    padding: 32px;
-  }
-  .faq-item-title {
-    font-family: Comic Neue;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 36.4px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-
-    width: 1056px;
-  }
-  .faq-item-text {
-    margin-top: 8px;
-
-    font-family: Comic Neue;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 30px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-
-    width: 1056px;
-  }
+  list-style-type: disc;
+  padding-left: 16px;
 }
 
-.advantages {
-  width: 375px;
-  height: 550px;
-
-  margin: auto;
-  padding: 60px 16px 0px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url("/img/advantages/Reviews.png");
-}
-.advantages-list {
-  padding-top: 32px;
-}
-.advantages-item {
-  margin: 0 12px;
-  width: 256px;
-  height: 217px;
-  padding: 16px;
-  border-radius: 32px;
-  background: rgba(255, 175, 54, 1);
-  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.5) inset,
-    0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-}
-.advantages-item-top {
-  display: flex;
-  justify-content: space-between;
-  padding: 6px 16px;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.advantages-text-bold {
-  font-family: Comic Neue;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 27px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-.advantages-text {
-  font-family: Comic Neue;
+.benefits-item-text {
+  font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-
-  width: 224px;
-  height: 136px;
-  padding: 8px 16px 8px 16px;
-  background: rgba(254, 243, 226, 1);
-  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25),
-    inset 0px 2px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(255, 255, 255, 0.5);
-
-  border-radius: 16px;
 }
-
+.benefits-item-text-bold {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.benefits-img {
+  width: 343px;
+  height: 430px;
+  margin-top: 40px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 32px;
+}
+.benefits-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 @media screen and (min-width: 1200px) {
-  .advantages {
+  .benefits {
     width: 1440px;
-    height: 651px;
-
     margin: auto;
-    padding: 80px 16px 160px;
-
-    background-image: url("/img/advantages/Reviews\ \(1\).png");
+    padding: 120px 160px;
   }
-  .advantages-list {
-    padding-top: 40px;
-    width: 1120px;
-    margin: auto;
-  }
-  .advantages-item {
-    margin: 0 18px;
-    width: 256px;
-    height: 262px;
-  }
-  .advantages-item-top {
+  .benefits-container {
     display: flex;
-    justify-content: space-between;
-    padding: 6px 16px;
+    padding-top: 32px;
+    gap: 96px;
     align-items: center;
-    margin-bottom: 10px;
   }
-  .advantages-text-bold {
-    font-family: Comic Neue;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 27px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+  .benefits-list {
+    width: 544px;
+
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    list-style-type: disc;
+    padding-left: 16px;
   }
-  .advantages-text {
-    font-family: Comic Neue;
+
+  .benefits-item-text {
+    font-family: Poppins;
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-
-    width: 224px;
-    height: 178px;
-
-    border-radius: 16px;
+  }
+  .benefits-item-text-bold {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .benefits-img {
+    margin-top: 0px;
+    width: 480px;
+    height: 601px;
+    border-radius: 32px;
   }
 }
 
 .footer {
-  background: rgba(190, 125, 25, 1);
+  background: rgba(155, 42, 35, 1);
 
-  color: rgba(254, 243, 226, 1);
+  color: rgba(255, 248, 240, 1);
   padding: 102px 57px 16px;
 }
 .footer-container {
@@ -990,7 +731,7 @@ a {
   gap: 10px;
 }
 .footer-text {
-  font-family: Comic Neue;
+  font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -999,11 +740,11 @@ a {
   text-decoration-skip-ink: none;
 
   text-decoration: none;
-  color: rgba(254, 243, 226, 1);
+  color: rgba(255, 248, 240, 1);
 }
 
 .footer-copyright {
-  font-family: Comic Neue;
+  font-family: Poppins;
   font-size: 11px;
   font-weight: 400;
   line-height: 16.5px;
@@ -1026,7 +767,7 @@ a {
   }
 
   .footer-text {
-    font-family: Comic Neue;
+    font-family: Poppins;
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
@@ -1036,10 +777,10 @@ a {
   }
 
   .footer-copyright {
-    font-family: Comic Neue;
-    font-size: 13px;
+    font-family: Poppins;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 19.5px;
+    line-height: 27px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -1048,23 +789,23 @@ a {
 .policy-terms-container {
   flex-direction: column;
   align-items: start;
-  padding: 124px 32px 116px;
+  padding: 160px 16px 80px;
 }
 .policy-terms-title {
-  font-family: Poetsen One;
-  font-size: 36px;
+  font-family: Wendy One;
+  font-size: 32px;
   font-weight: 400;
-  line-height: 46.8px;
+  line-height: 41.6px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
 
 .policy-terms-text {
-  font-family: Comic Neue;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 28.6px;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -1072,7 +813,7 @@ a {
   padding-top: 20px;
 }
 .policy-terms-texts {
-  font-family: Comic Neue;
+  font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -1083,7 +824,7 @@ a {
   padding-top: 8px;
 }
 .policy-terms-text-one {
-  font-family: Comic Neue;
+  font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -1098,7 +839,7 @@ a {
   list-style-type: disc;
 
   padding: 20px 0 20px 25px;
-  font-family: Comic Neue;
+  font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -1115,7 +856,7 @@ a {
 
   padding-left: 25px;
 
-  font-family: Comic Neue;
+  font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -1128,15 +869,17 @@ a {
   text-decoration: none;
 }
 .email-link-color {
-  color: rgba(148, 50, 23, 1);
+  color: rgba(155, 42, 35, 1);
 }
 @media screen and (min-width: 1200px) {
   .policy-terms-container {
-    padding: 186px 80px 116px;
+    width: 1440px;
+    margin: auto;
+    padding: 200px 160px 120px;
     align-items: start;
   }
   .policy-terms-title {
-    font-family: Poetsen One;
+    font-family: Wendy One;
     font-size: 40px;
     font-weight: 400;
     line-height: 52px;
@@ -1146,10 +889,10 @@ a {
   }
 
   .policy-terms-text {
-    font-family: Comic Neue;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 36.4px;
+    font-family: Poppins;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 33.8px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -1157,7 +900,7 @@ a {
     padding-top: 40px;
   }
   .policy-terms-texts {
-    font-family: Comic Neue;
+    font-family: Poppins;
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
@@ -1166,7 +909,7 @@ a {
     text-decoration-skip-ink: none;
   }
   .policy-terms-text-one {
-    font-family: Comic Neue;
+    font-family: Poppins;
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
@@ -1181,7 +924,7 @@ a {
     list-style-type: disc;
 
     padding: 20px 0 20px 25px;
-    font-family: Comic Neue;
+    font-family: Poppins;
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
@@ -1198,7 +941,7 @@ a {
 
     padding-left: 25px;
 
-    font-family: Comic Neue;
+    font-family: Poppins;
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
