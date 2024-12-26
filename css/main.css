@@ -1,0 +1,1209 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poetsen+One&display=swap");
+
+:root {
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #ebdfc0;
+  color: rgba(148, 50, 23, 1);
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button:hover {
+  scale: 120%;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.header.is-open .header__background {
+  left: 0;
+}
+.header__button-wrapper {
+  margin-left: auto;
+}
+.header__icon {
+  display: none;
+}
+
+.header__icon-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+.header__icon--menu {
+  display: block;
+}
+
+.header__icon-button.is-open .header__icon--menu {
+  display: none;
+}
+
+.header__icon-button.is-open .header__icon--close {
+  display: block;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  background: transparent;
+  display: flex;
+  height: 80px;
+  background: rgba(190, 125, 25, 1);
+}
+.header__background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 100%;
+
+  z-index: -1;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease;
+  background: rgba(190, 125, 25, 1);
+}
+.header.is-open .header__background {
+  left: 0;
+}
+.header__button-wrapper {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.policy-terms-header__button-wrapper {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__icon {
+  display: none;
+}
+.header__icon-button {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+.header__icon--menu {
+  display: block;
+}
+
+.header__icon-button.is-open .header__icon--menu {
+  display: none;
+}
+
+.header__icon-button.is-open .header__icon--close {
+  display: block;
+}
+
+.navigation {
+  display: -ms-flexbox;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 9px 11px;
+  position: relative;
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+
+  align-items: start;
+
+  top: 130px;
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  width: 100%;
+  height: 557px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 999;
+
+  padding: 0px 32px;
+
+  border-radius: 0px 0px;
+  gap: 26px;
+  background: rgba(190, 125, 25, 1);
+}
+.navigation__list.is-open {
+  right: 0;
+}
+.navigation__link {
+  font-family: Comic Neue;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  text-decoration: none;
+  color: rgba(254, 243, 226, 1);
+}
+
+.header.is-open {
+  background-color: transparent;
+}
+.navigation-img {
+  display: none;
+}
+.header-title {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (min-width: 1200px) {
+  .navigation-img {
+    display: flex;
+  }
+  .policy-terms-header__icon--menu {
+    display: none;
+  }
+  .header-title {
+    width: 44px;
+    height: 44px;
+
+    margin-right: 400px;
+  }
+  .header {
+    width: 100%;
+
+    height: 80px;
+    padding: 10px 20px 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+  }
+  .header__background {
+  }
+
+  .header__icon-button {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+
+    flex-direction: row;
+
+    flex: 1;
+    padding: 0;
+
+    width: 1440px;
+    margin: auto;
+  }
+  .navigation__list {
+    background-color: transparent;
+    flex-direction: row;
+    display: flex;
+    position: static;
+    width: 1400px;
+    margin: auto;
+
+    padding-block: 0;
+    flex: 1;
+    gap: 45px;
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .navigation__link {
+  }
+  .navigation__link:hover,
+  .navigation__link:focus {
+    background: transparent;
+  }
+  .header__icon-home-img {
+    display: none;
+  }
+  .navigation__item-desk {
+    display: none;
+  }
+}
+
+.home {
+  width: 375px;
+  height: 812px;
+
+  padding: 114px 16px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/home/Hero.png");
+  margin: auto;
+}
+
+.home-title {
+  font-family: Poetsen One;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 62.4px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  -webkit-text-stroke: 1px rgba(148, 50, 23, 1);
+  color: transparent;
+  background: linear-gradient(180deg, #fdf7de 0%, #fde85d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.home-text {
+  font-family: Comic Neue;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(255, 255, 255, 1);
+  padding: 24px 0 64px;
+}
+
+.home__google-button_link {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .home {
+    width: 1440px;
+    height: 759px;
+    display: flex;
+    align-items: start;
+
+    justify-content: start;
+    padding: 140px 0px 0px 160px;
+    background-image: url("/img/home/Hero\ \(1\).png");
+  }
+  .home-title {
+    font-family: Poetsen One;
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 124.8px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 742px;
+
+    -webkit-text-stroke: 4px rgba(148, 50, 23, 1);
+    color: transparent;
+    background: linear-gradient(180deg, #fdf7de 0%, #fde85d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  .home-text {
+    font-family: Comic Neue;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36.4px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    padding: 16px 0 80px;
+  }
+  .home__google-button_link {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    margin: 0;
+  }
+}
+.about {
+  padding: 64px 16px 0px;
+  margin: auto;
+  width: 375px;
+  height: 619px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/about/Frame\ 1.png");
+}
+
+.about-title {
+  font-family: Poetsen One;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46.8px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(190, 125, 25, 1);
+}
+
+.about-text {
+  font-family: Comic Neue;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  padding: 32px 0 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .about {
+    padding: 80px 448px;
+    margin: auto;
+    width: 1440px;
+    height: 481px;
+    background-image: url("/img/about/Frame\ 2.png");
+  }
+
+  .about-title {
+    font-family: Poetsen One;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 52px;
+    text-align: center;
+  }
+
+  .about-text {
+    font-family: Comic Neue;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    padding: 40px 0 0;
+  }
+  .about-img {
+    width: 524px;
+    height: 406px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/image/about/img\ tel\ \(1\).png");
+  }
+}
+
+.play {
+  width: 375px;
+  margin: auto;
+  padding: 32px 16px 0;
+  text-align: center;
+}
+.play-container {
+  width: 342px;
+  padding: 16px;
+  gap: 16px;
+  border-radius: 32px;
+  background: rgba(255, 175, 54, 1);
+  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.5) inset,
+    0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.play-title {
+  font-family: Comic Neue;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28.6px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.play-list {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 16px;
+}
+.play-item {
+  width: 310px;
+  height: 147px;
+  padding: 16px;
+  background: rgba(254, 243, 226, 1);
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25),
+    inset 0px 2px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 4px 4px 0px rgba(255, 255, 255, 0.5);
+
+  border-radius: 16px;
+}
+
+.play-text-bold {
+  font-family: Comic Neue;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.play-text {
+  padding-top: 16px;
+  font-family: Comic Neue;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .play {
+    width: 1440px;
+    padding: 47px 160px 80px;
+  }
+
+  .play-container {
+    width: 1120px;
+    height: 466px;
+    padding: 32px;
+    border-radius: 32px;
+  }
+  .play-title {
+    font-family: Comic Neue;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36.4px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .play-list {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 32px;
+  }
+  .play-item {
+    width: 341px;
+    height: 159px;
+    padding: 16px;
+    background: rgba(254, 243, 226, 1);
+    box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25),
+      inset 0px 2px 4px 0px rgba(0, 0, 0, 0.25),
+      0px 4px 4px 0px rgba(255, 255, 255, 0.5);
+
+    border-radius: 16px;
+  }
+
+  .play-text-bold {
+    font-family: Comic Neue;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .play-text {
+    padding-top: 16px;
+
+    font-family: Comic Neue;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
+.how {
+  width: 375px;
+  height: 1929px;
+  margin: auto;
+  padding: 64px 16px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/how/Advantages.png");
+}
+
+.how-list {
+  width: 342px;
+  padding-top: 32px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.how-item {
+  width: 343px;
+  height: 287px;
+  padding: 40px 0px 40px 0px;
+}
+.how-img {
+  margin: auto;
+}
+.how-text-bold {
+  padding: 16px;
+  font-family: Comic Neue;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.how-text {
+  font-family: Comic Neue;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+@media screen and (min-width: 1200px) {
+  .how {
+    width: 1440px;
+    height: 786px;
+
+    margin: auto;
+    padding: 80px 160px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/img/how/Advantages\ \(1\).png");
+  }
+
+  .how-list {
+    width: auto;
+    padding-top: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    column-gap: 32px;
+  }
+  .how-item {
+    width: 352px;
+    height: 287px;
+    padding: 40px 0px 40px 0px;
+  }
+}
+.gallery {
+  width: 375px;
+  height: 761px;
+
+  margin: auto;
+  padding: 64px 16px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/gallery/Gallery.png");
+}
+.gallery-container {
+  margin-top: 32px;
+  width: 343px;
+  height: 574px;
+  background: rgba(255, 175, 54, 1);
+  padding: 16px;
+  border-radius: 32px;
+  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.5) inset,
+    0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.gallery__list {
+}
+.gallery__item {
+  width: 294px;
+  height: 522px;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+  position: relative;
+  margin: 0 4px;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.slick-prev:before {
+  display: none;
+}
+.slick-next:before {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .gallery {
+    width: 1440px;
+    height: 882px;
+
+    margin: auto;
+    padding: 80px 160px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/img/gallery/Gallery\ \(1\).png");
+  }
+  .gallery-container {
+    margin-top: 40px;
+    width: 1120px;
+    height: 630px;
+    background: rgba(255, 175, 54, 1);
+    padding: 40px 96px;
+    border-radius: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.5) inset,
+      0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  }
+  .gallery__list {
+  }
+  .gallery__item {
+    margin: 0 10px;
+  }
+
+  .slick-prev:before {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    margin-left: -44px;
+    content: url("/img/gallery/Arrow.png");
+  }
+  .slick-next:before {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    content: url("/img/gallery/Arrow\ \(1\).png");
+  }
+}
+.faq {
+  width: 375px;
+  height: 1479px;
+  margin: auto;
+  padding: 64px 16px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/faq/Advantages\ \(2\).png");
+}
+.faq-list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 343px;
+  background: rgba(255, 175, 54, 1);
+  padding: 16px;
+  border-radius: 32px;
+  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.5) inset,
+    0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.faq-item-title {
+  font-family: Comic Neue;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  width: 311px;
+  background: rgba(254, 243, 226, 1);
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25),
+    inset 0px 2px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 4px 4px 0px rgba(255, 255, 255, 0.5);
+
+  padding: 8px 16px 8px 16px;
+  border-radius: 16px;
+}
+.faq-item-text {
+  margin-top: 8px;
+  font-family: Comic Neue;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  width: 311px;
+  background: rgba(254, 243, 226, 1);
+
+  padding: 8px 16px 8px 16px;
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25),
+    inset 0px 2px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 4px 4px 0px rgba(255, 255, 255, 0.5);
+
+  border-radius: 16px;
+}
+@media screen and (min-width: 1200px) {
+  .faq {
+    width: 1440px;
+    height: 1162px;
+    padding: 80px 160px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/img/faq/Advantages\ \(3\).png");
+  }
+
+  .faq-list {
+    margin-top: 40px;
+    width: 1120px;
+    padding: 32px;
+  }
+  .faq-item-title {
+    font-family: Comic Neue;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36.4px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    width: 1056px;
+  }
+  .faq-item-text {
+    margin-top: 8px;
+
+    font-family: Comic Neue;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    width: 1056px;
+  }
+}
+
+.advantages {
+  width: 375px;
+  height: 550px;
+
+  margin: auto;
+  padding: 60px 16px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/advantages/Reviews.png");
+}
+.advantages-list {
+  padding-top: 32px;
+}
+.advantages-item {
+  margin: 0 12px;
+  width: 256px;
+  height: 217px;
+  padding: 16px;
+  border-radius: 32px;
+  background: rgba(255, 175, 54, 1);
+  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.5) inset,
+    0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.advantages-item-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 16px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.advantages-text-bold {
+  font-family: Comic Neue;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.advantages-text {
+  font-family: Comic Neue;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  width: 224px;
+  height: 136px;
+  padding: 8px 16px 8px 16px;
+  background: rgba(254, 243, 226, 1);
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25),
+    inset 0px 2px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 4px 4px 0px rgba(255, 255, 255, 0.5);
+
+  border-radius: 16px;
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages {
+    width: 1440px;
+    height: 651px;
+
+    margin: auto;
+    padding: 80px 16px 160px;
+
+    background-image: url("/img/advantages/Reviews\ \(1\).png");
+  }
+  .advantages-list {
+    padding-top: 40px;
+    width: 1120px;
+    margin: auto;
+  }
+  .advantages-item {
+    margin: 0 18px;
+    width: 256px;
+    height: 262px;
+  }
+  .advantages-item-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 16px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .advantages-text-bold {
+    font-family: Comic Neue;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .advantages-text {
+    font-family: Comic Neue;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    width: 224px;
+    height: 178px;
+
+    border-radius: 16px;
+  }
+}
+
+.footer {
+  background: rgba(190, 125, 25, 1);
+
+  color: rgba(254, 243, 226, 1);
+  padding: 102px 57px 16px;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 64px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  align-items: start;
+
+  gap: 10px;
+}
+.footer-text {
+  font-family: Comic Neue;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  text-decoration: none;
+  color: rgba(254, 243, 226, 1);
+}
+
+.footer-copyright {
+  font-family: Comic Neue;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding: 80px 72px 16px;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 80px;
+  }
+
+  .footer-text {
+    font-family: Comic Neue;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .footer-copyright {
+    font-family: Comic Neue;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19.5px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
+.policy-terms-container {
+  flex-direction: column;
+  align-items: start;
+  padding: 124px 32px 116px;
+}
+.policy-terms-title {
+  font-family: Poetsen One;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46.8px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.policy-terms-text {
+  font-family: Comic Neue;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  padding-top: 20px;
+}
+.policy-terms-texts {
+  font-family: Comic Neue;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  padding-top: 8px;
+}
+.policy-terms-text-one {
+  font-family: Comic Neue;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  padding-top: 20px;
+}
+
+.terms-list {
+  list-style-type: disc;
+
+  padding: 20px 0 20px 25px;
+  font-family: Comic Neue;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.terms-lists {
+  list-style-type: disc;
+
+  padding-left: 25px;
+
+  font-family: Comic Neue;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.email-link {
+  color: inherit;
+  text-decoration: none;
+}
+.email-link-color {
+  color: rgba(148, 50, 23, 1);
+}
+@media screen and (min-width: 1200px) {
+  .policy-terms-container {
+    padding: 186px 80px 116px;
+    align-items: start;
+  }
+  .policy-terms-title {
+    font-family: Poetsen One;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 52px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .policy-terms-text {
+    font-family: Comic Neue;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36.4px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    padding-top: 40px;
+  }
+  .policy-terms-texts {
+    font-family: Comic Neue;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .policy-terms-text-one {
+    font-family: Comic Neue;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    padding-top: 30px;
+  }
+
+  .terms-list {
+    list-style-type: disc;
+
+    padding: 20px 0 20px 25px;
+    font-family: Comic Neue;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .terms-lists {
+    list-style-type: disc;
+
+    padding-left: 25px;
+
+    font-family: Comic Neue;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
